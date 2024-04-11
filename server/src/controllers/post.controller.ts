@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import Post from "../models/post.model";
 
+
 class PostsController {
     public async createPost(req: Request, res: Response) {
         const { inhalt, userId } = req.body;
