@@ -1,0 +1,44 @@
+{
+  "development": {
+    "username": "user",
+    "password": "password",
+    "database": "minitwitter",
+    "host": "127.0.0.1",
+    "port": 54321,
+    "dialect": "postgres",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "test": {
+    "username": "user",
+    "password": "password",
+    "database": "minitwitter",
+    "host": "127.0.0.1",
+    "port": 54321,
+    "dialect": "postgres",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "production": {
+    "username": "user",
+    "password": "password",
+    "database": "minitwitter",
+    "host": "127.0.0.1",
+    "port": 54321,
+    "dialect": "postgres",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  }
+}

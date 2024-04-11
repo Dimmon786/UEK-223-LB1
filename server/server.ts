@@ -1,20 +1,20 @@
 import express, { Application } from "express";
-import Server from "./src/index";
 import 'dotenv/config';
+import Routes from "./src/routes/index";
 
-require("dotenv").config();
+
 const app: Application = express();
-const server: Server = new Server(app);
 const PORT: number = process.env.PORT ? parseInt(process.env.PORT, 10) : 8080;
 
-app
-  .listen(PORT, "localhost", function () {
-    console.log(`Server is running on port http://localhost:${PORT}.`);
-  })
-  .on("error", (err: any) => {
-    if (err.code === "EADDRINUSE") {
-      console.log("Error: address already in use");
-    } else {
-      console.log(err);
-    }
-  });
+new Routes(app);
+
+app.listen(PORT, "localhost", function () {
+  console.log(`Server is running on port http://localhost:${PORT}.`);
+})
+.on("error", (err: NodeJS.ErrnoException) => {
+  if (err.code === "EADDRINUSE") {
+    console.log("Error: Address already in use");
+  } else {
+    console.log(err);
+  }
+});

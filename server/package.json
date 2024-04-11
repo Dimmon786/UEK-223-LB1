@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "comp": "tsc && nodemon ./build/server.js localhost 9090"
+    "comp": "tsc && nodemon ./build/server.js localhost 9090",
+    "compSeed": "tsc && sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all && nodemon ./build/server.js localhost 9091"
   },
   "keywords": [],
   "author": "Joel Leimbacher",
@@ -17,6 +18,7 @@
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.4.2",
+    "sequelize-cli": "^6.6.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
