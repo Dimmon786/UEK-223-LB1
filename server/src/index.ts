@@ -13,7 +13,7 @@ export default class Server {
     new Routes(app);
   }
 
-  private config (app: Application): void {
+  private config(app: Application): void {
     const corsOptions: CorsOptions = {
       origin: "http://localhost:8081"
     };
@@ -24,7 +24,7 @@ export default class Server {
 
   }
 
-  private syncDatabase (): void {
+  private syncDatabase(): void {
     const db = new Database();
     db.sequelize?.sync();
   }

@@ -2,7 +2,8 @@ import { Model, Table, Column, DataType, AutoIncrement, ForeignKey, PrimaryKey }
 import Users from "./users.model";
 
 @Table({
-    tableName: "post"
+    tableName: "post",
+    timestamps: true,
 })
 export default class Post extends Model {
     @Column({
@@ -22,7 +23,7 @@ export default class Post extends Model {
 
     @Column({
         type: DataType.STRING(500),
-        field: "inhalt"
+        field: "inhalt",
     })
     inhalt?: string;
 
