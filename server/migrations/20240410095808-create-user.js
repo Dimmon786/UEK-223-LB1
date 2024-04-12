@@ -10,11 +10,15 @@ module.exports = {
         autoIncrement: true,
         allowNull: true,
       },
-      username: {
+      benutzerName: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      password: {
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      passwort: {
         type: Sequelize.STRING,
         allowNull: false,
       },
